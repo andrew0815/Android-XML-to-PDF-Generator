@@ -1,0 +1,474 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/n"
+    >
+
+    <ScrollView
+        android:id="@+id/scrollView2"
+        android:layout_width="389dp"
+        android:layout_height="621dp"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:id="@+id/contanreport"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+
+                <TextView
+                    android:id="@+id/textView2"
+                    android:layout_width="269dp"
+                    android:layout_height="68dp"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/circle"
+                    android:backgroundTint="#BF741C7A"
+                    android:gravity="center"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:text="Reporte de servicio"
+                    android:textColor="@color/white"
+                    android:textSize="26dp"
+                    android:textStyle="bold" />
+
+
+            </LinearLayout>
+
+            <Spinner
+                android:id="@+id/spinnerservice"
+                android:layout_width="match_parent"
+                android:layout_height="63dp"
+                android:layout_gravity="center"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="10dp"
+                android:background="#603BE4F3"
+                android:backgroundTint="#603BE4F3" />
+
+
+            <LinearLayout
+                android:id="@+id/externserv"
+                android:layout_width="match_parent"
+                android:layout_height="234dp"
+                android:layout_marginTop="22dp"
+                android:orientation="vertical">
+
+
+                <LinearLayout
+                    android:layout_width="264dp"
+                    android:layout_height="48dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/txttipo"
+                        android:layout_width="214dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginRight="8dp"
+                        android:layout_weight="1"
+                        android:background="#CDCDCE"
+                        android:gravity="center"
+                        android:text="   EMPRESA O PROVEEDOR"
+                        android:textColor="#741c7a"
+                        android:textSize="18dp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+                <EditText
+                    android:id="@+id/edtxproveedor"
+                    android:layout_width="match_parent"
+                    android:layout_height="59dp"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@drawable/circle"
+                    android:backgroundTint="@color/white"
+                    android:gravity="fill"
+                    android:hint="Empresa o proveedor"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/editexthint" />
+
+                <TextView
+                    android:id="@+id/txtnombre"
+                    android:layout_width="380dp"
+                    android:layout_height="48dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="8dp"
+                    android:background="#CDCDCE"
+                    android:gravity="fill"
+                    android:text="  Nombre de quien realiza el servicio"
+                    android:textColor="#741c7a"
+                    android:textSize="18dp"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/edtxnombrequienserv"
+                    android:layout_width="match_parent"
+                    android:layout_height="63dp"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp"
+                    android:background="@drawable/circle"
+                    android:backgroundTint="@color/white"
+                    android:gravity="fill"
+                    android:hint="Nombre de quien realiza el servicio"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/editexthint" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="63dp"
+                android:layout_marginTop="22dp"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/edtxdateserv"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/circle"
+                    android:backgroundTint="@color/white"
+                    android:clickable="true"
+                    android:focusable="false"
+                    android:gravity="center"
+                    android:hint="  Fecha: dia/mes/año"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/editexthint"
+                    android:textStyle="bold" />
+
+
+                <EditText
+                    android:id="@+id/edtxfolioserv"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/circle"
+                    android:backgroundTint="@color/white"
+                    android:hint="  Folio"
+                    android:textAlignment="center"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/editexthint" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="175dp"
+                android:layout_marginTop="20dp"
+                android:orientation="vertical">
+
+                <EditText
+                    android:id="@+id/edtxequipo"
+                    android:layout_width="match_parent"
+                    android:layout_height="72dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/circle"
+                    android:backgroundTint="@color/white"
+                    android:gravity="center"
+                    android:hint="Descripcion o nombre del equipo"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/editexthint"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="82dp"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+
+                    <EditText
+                        android:id="@+id/edtxnumserie"
+                        android:layout_width="489dp"
+                        android:layout_height="77dp"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginRight="8dp"
+                        android:layout_weight="3"
+                        android:background="@drawable/circle"
+                        android:backgroundTint="@color/white"
+                        android:gravity="center"
+                        android:hint="Ingresar o scanear  numero de serie del equipo"
+
+                        android:textColor="@color/black"
+                        android:textColorHint="@color/editexthint"
+                        android:textStyle="bold" />
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="20dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/textView7"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:background="#CDCDCE"
+                    android:gravity="center"
+                    android:text="Tipo de servicio realizado"
+                    android:textColor="#741c7a"
+                    android:textSize="18dp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+
+                android:orientation="horizontal">
+
+
+                <CheckBox
+                    android:id="@+id/checkcorrectivo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="3dp"
+                    android:layout_marginRight="3dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/circle"
+                    android:backgroundTint="@color/white"
+                    android:text="Correctivo"
+                    android:textColor="@color/black" />
+
+                <CheckBox
+                    android:id="@+id/checprevetivo"
+                    android:layout_width="74dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="3dp"
+                    android:layout_marginRight="3dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/circle"
+                    android:backgroundTint="@color/white"
+                    android:text="Preventivo"
+                    android:textColor="@color/black" />
+
+                <CheckBox
+                    android:id="@+id/checrevision"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="3dp"
+                    android:layout_marginRight="3dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/circle"
+                    android:backgroundTint="@color/white"
+                    android:text="Revision"
+                    android:textColor="@color/black" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+
+                android:orientation="horizontal">
+
+
+                <CheckBox
+                    android:id="@+id/checkinstalacion"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="3dp"
+                    android:layout_marginRight="3dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/circle"
+                    android:backgroundTint="@color/white"
+                    android:text="Instalacion" />
+
+                <CheckBox
+                    android:id="@+id/checkcapacitacion"
+                    android:layout_width="82dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="3dp"
+                    android:layout_marginRight="3dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/circle"
+                    android:backgroundTint="@color/white"
+                    android:text="Capacitacion"
+                    android:textColor="@color/black" />
+
+                <CheckBox
+
+                    android:id="@+id/checkretiro"
+                    android:layout_width="88dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="3dp"
+                    android:layout_marginRight="3dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/circle"
+                    android:backgroundTint="@color/white"
+                    android:text="Retiro"
+                    android:textColor="@color/black" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:orientation="horizontal">
+
+
+                <CheckBox
+                    android:id="@+id/checkotro"
+                    android:layout_width="10dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="3dp"
+                    android:layout_marginRight="3dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/circle"
+                    android:backgroundTint="@color/white"
+                    android:text="Otro:"
+                    android:textColor="@color/black" />
+
+                <EditText
+                    android:id="@+id/edtxtotro"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="3dp"
+                    android:layout_marginRight="3dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/circle"
+                    android:backgroundTint="@color/white"
+                    android:hint="Actividad Realizada"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/editexthint" />
+
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="8dp"
+                android:background="@drawable/circle"
+                android:backgroundTint="#CDCDCE"
+                android:gravity="center_horizontal"
+                android:padding="8dp"
+                android:text="Descripcion del trabajo realizado"
+                android:textAlignment="center"
+                android:textColor="#741c7a"
+                android:textSize="18dp"
+                android:textStyle="bold" />
+
+            <EditText
+
+                android:id="@+id/edtxdescription"
+                android:layout_width="match_parent"
+                android:layout_height="284dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:background="@color/white"
+                android:gravity="left|top"
+                android:hint="Descripcion de actividades realizadas"
+                android:maxLines="5"
+                android:textColor="@color/black"
+                android:textColorHint="@color/editexthint" />
+
+            <Button
+                android:id="@+id/btnfotoserv"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:text="AGREGAR FOTOGRAFIA" />
+
+
+            <TextView
+                android:id="@+id/txtrecibeserv"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginRight="8dp"
+                android:background="#CDCDCE"
+                android:gravity="left"
+                android:text="Nombre de quien recibe el servicio"
+                android:textColor="#741c7a"
+                android:textSize="22dp" />
+
+
+            <EditText
+                android:id="@+id/edtxtrecibeserv"
+                android:layout_width="match_parent"
+                android:layout_height="65dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:background="@color/white"
+                android:gravity="center"
+                android:hint="Nombre de quien recibe el servicio " />
+
+            <TextView
+                android:id="@+id/textfirma"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="5dp"
+                android:background="@color/white"
+                android:text="Firma" />
+
+            <TextView
+                android:id="@+id/textofirma"
+                android:layout_width="396dp"
+                android:layout_height="117dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="5dp"
+                android:background="@color/white"
+                android:text="Firma" />
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <Button
+        android:id="@+id/buttonpdfreport"
+        android:layout_width="406dp"
+        android:layout_height="88dp"
+        android:text="GUARDAR"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/scrollView2" />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

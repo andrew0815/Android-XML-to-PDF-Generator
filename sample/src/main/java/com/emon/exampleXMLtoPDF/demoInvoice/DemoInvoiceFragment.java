@@ -11,6 +11,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -31,13 +32,14 @@ import java.util.Calendar;
 public class DemoInvoiceFragment extends Fragment {
 
     private static final String TAG = "InvoiceFragment";
-    private RecyclerView invoice_rv;
+
     private Button generate_invoice_btn;
     //invoice views edit items
-    TextView customer_shop_name_tv, customer_address_tv, customer_phone_tv,
-            customer_order_date_tv, our_delivery_date_tv;
+    TextView titulo,servintex,fecha,hospicliente,folio,equipo,marca,modelo,serie,
+           tiposerv,descripactiv,textrecibe,textrealiza;
+    ImageView fotoserv,signatracibe,signatreaiza;
 
-    private View finalInvoiceViewToPrint;
+    private View root;
 
     public DemoInvoiceFragment() {
     }
@@ -60,24 +62,20 @@ public class DemoInvoiceFragment extends Fragment {
      */
     private View createInvoiceViewFromRootView(View root) {
 
-        View finalInvoiceViewToPrint = root.findViewById(R.id.invoice_layout);
-        invoice_rv = finalInvoiceViewToPrint.findViewById(R.id.invoice_rv);
-        customer_shop_name_tv = finalInvoiceViewToPrint.findViewById(R.id.customer_shop_name_tv);
-        customer_address_tv = finalInvoiceViewToPrint.findViewById(R.id.customer_address_tv);
-        customer_phone_tv = finalInvoiceViewToPrint.findViewById(R.id.customer_phone_tv);
-        customer_order_date_tv = finalInvoiceViewToPrint.findViewById(R.id.customer_order_date_tv);
-        our_delivery_date_tv = finalInvoiceViewToPrint.findViewById(R.id.our_delivery_date_tv);
-        customer_shop_name_tv.setText("Name: " + "Demo shop name");
-        customer_address_tv.setText("Address: " + "Demo shop address");
-        customer_phone_tv.setText("Cell No: " + "1234567");
-        DateFormat format = new SimpleDateFormat("dd/MM/yyyy");
-        final String orderDate = format.format(1617976800);
-        final String deliveryDate = format.format(Calendar.getInstance().getTime());
-        customer_order_date_tv.setText("Order Date: " + orderDate);
-        our_delivery_date_tv.setText("Delivery Date: " + deliveryDate);
-        RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(getContext(), RecyclerView.VERTICAL, false);
-        invoice_rv.setLayoutManager(layoutManager);
-        invoice_rv.setAdapter(new DummyItemRecyclerViewAdapter(DummyContent.ITEMS));
+        View finalInvoiceViewToPrint = root.findViewById(R.id.rootcontstrain);
+        titulo= finalInvoiceViewToPrint.findViewById(R.id.textView9);
+        servintex = finalInvoiceViewToPrint.findViewById(R.id.textintext);
+        fecha = finalInvoiceViewToPrint.findViewById(R.id.textfecha);
+        hospicliente= finalInvoiceViewToPrint.findViewById(R.id.texthospi);
+        folio = finalInvoiceViewToPrint.findViewById(R.id.textfolio);
+        equipo= finalInvoiceViewToPrint.findViewById(R.id.textequipo);
+        marca= finalInvoiceViewToPrint.findViewById(R.id.textmarca);
+        modelo= finalInvoiceViewToPrint.findViewById(R.id.textmodelo);
+        serie = finalInvoiceViewToPrint.findViewById(R.id.textserie);
+        tiposerv= finalInvoiceViewToPrint.findViewById(R.id.txttipo);
+        descripactiv= finalInvoiceViewToPrint.findViewById(R.id.textView19);
+        textrealiza= finalInvoiceViewToPrint.findViewById(R.id.textView9);
+        textrecibe= finalInvoiceViewToPrint.findViewById(R.id.textView16);
 
         return finalInvoiceViewToPrint;
     }
@@ -86,9 +84,9 @@ public class DemoInvoiceFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View root = inflater.inflate(R.layout.fragment_demo_invoice, container, false);
-        generate_invoice_btn = root.findViewById(R.id.generate_invoice_btn);
 
-        finalInvoiceViewToPrint = createInvoiceViewFromRootView(root);
+
+        root= createInvoiceViewFromRootView(root);
 
         generate_invoice_btn.setOnClickListener(v -> generatePdf());
 
@@ -100,13 +98,14 @@ public class DemoInvoiceFragment extends Fragment {
         PdfGenerator.getBuilder()
                 .setContext(getContext())
                 .fromViewSource()
-                .fromView(finalInvoiceViewToPrint)
+                .fromView(root)
                 /* "fromLayoutXML()" takes array of layout resources.
                  * You can also invoke "fromLayoutXMLList()" method here which takes list of layout resources instead of array. */
                 .setPageSize(PdfGenerator.PageSize.A4)
                 /* It takes default page size like A4,A5. You can also set custom page size in pixel
                  * by calling ".setCustomPageSize(int widthInPX, int heightInPX)" here. */
                 .setFileName("demo-invoice")
+
                 /* It is file name */
                 .setFolderName("demo-invoice-folder/")
                 /* It is folder name. If you set the folder name like this pattern (FolderA/FolderB/FolderC), then

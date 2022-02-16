@@ -1,6 +1,7 @@
 package com.emon.exampleXMLtoPDF;
 
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -15,16 +16,26 @@ import com.gkemon.XMLtoPDF.model.FailureResponse;
 import com.gkemon.XMLtoPDF.model.SuccessResponse;
 
 public class MainActivity extends AppCompatActivity {
-    Button btnPrint,btnInvoice;
+    Button btnPrint,btnInvoice,test2;
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
 
-
+        test2=findViewById(R.id.test2);
         btnPrint=findViewById(R.id.bt_print);
         btnInvoice=findViewById(R.id.bt_invoice);
+
+        test2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this,s_testpdf.class);
+                startActivity(intent);
+            }
+        });
 
         btnPrint.setOnClickListener(new View.OnClickListener() {
             @Override

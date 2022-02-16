@@ -124,13 +124,9 @@ public class PdfGenerator {
     }
 
 
-    public interface PageSizeStep {
-        FileNameStep setPageSize(PageSize pageSize);
-    }
-
-
     public interface FileNameStep {
         Build setFileName(String fileName);
+        FileNameStep setPageSize(PageSize pageSize);
     }
 
     public interface Build {
@@ -143,7 +139,7 @@ public class PdfGenerator {
     }
 
 
-    public static class Builder implements Build, FileNameStep, PageSizeStep
+    public static class Builder implements Build, FileNameStep
             , LayoutXMLSourceIntakeStep, ViewSourceIntakeStep, ViewIDSourceIntakeStep
             , FromSourceStep, ContextStep {
 

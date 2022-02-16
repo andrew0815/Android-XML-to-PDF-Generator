@@ -9,38 +9,58 @@
     android:orientation="vertical">
 
     <TextView
-        android:textSize="20sp"
-        android:textColor="@android:color/white"
-        android:textStyle="bold"
-        android:background="@android:color/holo_purple"
-        android:layout_gravity="center"
         android:id="@+id/tv_print_area"
-        android:gravity="center"
-        android:textAlignment="center"
         android:layout_width="400dp"
-        android:layout_height="500dp"
-        android:text="Hi, Im am a dummy XML" />
-    <Button
-        android:id="@+id/bt_print"
-        android:text="Print me"
-        android:textAllCaps="false"
-        android:layout_margin="20dp"
-        android:backgroundTint="@android:color/holo_red_light"
+        android:layout_height="446dp"
+        android:layout_gravity="center"
+        android:background="@android:color/holo_purple"
+        android:gravity="center"
+        android:text="Hi, Im am a dummy XML"
+        android:textAlignment="center"
         android:textColor="@android:color/white"
-        android:layout_gravity="center|bottom"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
-    </Button>
-    <Button
-        android:id="@+id/bt_invoice"
-        android:text="Print demo invoice me"
-        android:textAllCaps="false"
-        android:layout_margin="20dp"
-        android:backgroundTint="@android:color/holo_red_light"
-        android:textColor="@android:color/white"
-        android:layout_gravity="center|bottom"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
-    </Button>
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <LinearLayout
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/bt_print"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_weight="1"
+            android:backgroundTint="@android:color/holo_red_light"
+            android:gravity="center"
+            android:text="Print me"
+            android:textColor="@android:color/white" />
+
+        <Button
+            android:id="@+id/bt_invoice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_weight="1"
+            android:backgroundTint="@android:color/holo_red_light"
+            android:gravity="center"
+            android:text="Print demo invoice me"
+            android:textAllCaps="false"
+            android:textColor="@android:color/white"/>
+        <Button
+            android:id="@+id/test2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_weight="1"
+            android:backgroundTint="@android:color/holo_red_light"
+            android:gravity="center"
+            android:text="test2"
+            android:textAllCaps="false"
+            android:textColor="@android:color/white"/>
+    </LinearLayout>
+
 
 </LinearLayout>
